@@ -89,15 +89,15 @@
 
             <Button
                 android:id="@+id/btnLogin"
-                android:layout_width="160dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/layout_width_160dp"
+                android:layout_height="@dimen/layout_height_40dp"
                 android:layout_below="@id/tvForgotPassword"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="30dp"
+                android:layout_marginTop="@dimen/layout_margin_top_40dp"
+                android:layout_marginBottom="@dimen/margin_bottom_30dp"
                 android:background="@drawable/bg_disabled_login_button"
                 android:enabled="false"
-                android:text="Login"
+                android:text="@string/button_login_description"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
 

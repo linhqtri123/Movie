@@ -13,4 +13,7 @@
     <dimen name="box_stroke_width_02dp">0.2dp</dimen>
     <dimen name="text_view_text_size_15sp">15sp</dimen>
     <dimen name="layout_margin_top_40dp">40dp</dimen>
+    <dimen name="layout_width_160dp">160dp</dimen>
+    <dimen name="layout_height_40dp">40dp</dimen>
+    <dimen name="margin_bottom_30dp">30dp</dimen>
 </resources>
