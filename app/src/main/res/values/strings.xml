@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">MovieApp</string>
+    <string name="login_text_view_description">Login</string>
+    <string name="edit_text_password">Password</string>
+    <string name="edit_text_username">Username</string>
 </resources>
