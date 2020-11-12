@@ -3,4 +3,5 @@
     <string name="login_text_view_description">Login</string>
     <string name="edit_text_password">Password</string>
     <string name="edit_text_username">Username</string>
+    <string name="text_view_forgot_password_description">Forgot Password?</string>
 </resources>

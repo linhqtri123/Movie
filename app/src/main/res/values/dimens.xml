@@ -10,5 +10,7 @@
     <dimen name="elevation_15dp">15dp</dimen>
     <dimen name="layout_width_300dp">300dp</dimen>
     <dimen name="layout_height_60dp">60dp</dimen>
-    <item name="box_stroke_width_02dp" type="dimen" format="float">0.2dp</item>
+    <dimen name="box_stroke_width_02dp">0.2dp</dimen>
+    <dimen name="text_view_text_size_15sp">15sp</dimen>
+    <dimen name="layout_margin_top_40dp">40dp</dimen>
 </resources>
