@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bg_color">
 
     <ImageView
@@ -55,6 +56,8 @@
                     android:layout_width="@dimen/layout_width_300dp"
                     android:layout_height="@dimen/layout_height_60dp"
                     android:hint="@string/edit_text_username"
+                    app:boxStrokeWidth="0dp"
+
                     android:textColorHint="@color/gray">
 
                     <com.google.android.material.textfield.TextInputEditText
