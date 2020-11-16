@@ -5,4 +5,6 @@
     <string name="edit_text_username">Username</string>
     <string name="text_view_forgot_password_description">Forgot Password?</string>
     <string name="button_login_description">Login</string>
+    <string name="login_activity_login_success">Login Success</string>
+    <string name="login_activity_login_failed">Email or Password is incorrect</string>
 </resources>

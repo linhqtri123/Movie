@@ -69,7 +69,7 @@ class LoginActivity : AppCompatActivity() {
             ) {
                 Toast.makeText(
                     this,
-                    "Login Success",
+                    getString(R.string.login_activity_login_success),
                     Toast.LENGTH_SHORT
                 ).show()
                 startActivity(Intent(this, MainActivity::class.java))
@@ -77,7 +77,7 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(
                     this,
-                    "Email or Password is incorrect",
+                    getString(R.string.login_activity_login_failed),
                     Toast.LENGTH_SHORT
                 ).show()
             }

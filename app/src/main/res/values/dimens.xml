@@ -16,4 +16,7 @@
     <dimen name="layout_width_160dp">160dp</dimen>
     <dimen name="layout_height_40dp">40dp</dimen>
     <dimen name="margin_bottom_30dp">30dp</dimen>
+    <dimen name="corner_radius_60dp">60dp</dimen>
+    <dimen name="stroke_width_5dp">5dp</dimen>
+    <dimen name="corner_radius_10dp">10dp</dimen>
 </resources>
