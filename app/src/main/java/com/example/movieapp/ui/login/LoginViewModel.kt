@@ -18,7 +18,7 @@ class LoginViewModel : ViewModel(), LoginMVContract {
     private val passwordPattern = Pattern.compile("""^(?=.*).{8,16}$""")
 
     override fun login(email: String, password: String): Boolean =
-        email == "admin@gmail.com" && password == "admin"
+        email == "admin@gmail.com" && password == "admin123"
 
     override fun infoValidateStatus(): PublishSubject<Boolean> = validateLoginInformationStatus
 
@@ -32,5 +32,4 @@ class LoginViewModel : ViewModel(), LoginMVContract {
             validateLoginInformationStatus.onNext(false)
         }
     }
-
 }
