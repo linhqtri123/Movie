@@ -7,6 +7,7 @@ import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.example.movieapp.MainActivity
 import com.example.movieapp.R
+import com.example.movieapp.ui.home.HomeActivity
 import com.example.movieapp.ui.login.LoginActivity
 
 /**
@@ -23,7 +24,7 @@ class SplashActivity : AppCompatActivity() {
     private fun handleChangeActivityDelay() {
         Handler(Looper.getMainLooper()).postDelayed({
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, HomeActivity::class.java))
             finish()
         }, 3000)
     }

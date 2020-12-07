@@ -22,5 +22,5 @@ data class MovieModel(
 )
 
 data class MoviePages(
-    @SerializedName("results") val results: List<MovieModel>
+    @SerializedName("results") val results: MutableList<MovieModel>
 )
