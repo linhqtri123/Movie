@@ -19,4 +19,10 @@
     <dimen name="corner_radius_60dp">60dp</dimen>
     <dimen name="stroke_width_5dp">5dp</dimen>
     <dimen name="corner_radius_10dp">10dp</dimen>
+    <dimen name="margin_15dp">15dp</dimen>
+    <dimen name="text_view_text_size_20sp">20sp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_3dp">3dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="margin_2dp">2dp</dimen>
 </resources>

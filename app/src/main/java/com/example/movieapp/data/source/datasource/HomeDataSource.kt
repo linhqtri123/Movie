@@ -9,4 +9,6 @@ import retrofit2.Response
  */
 interface HomeDataSource {
     fun getListNowPlaying(): Single<Response<MoviePages>>?
+
+    fun getListPopular(): Single<Response<MoviePages>>?
 }

@@ -1,6 +1,5 @@
 package com.example.movieapp.ui.home
 
-import android.annotation.SuppressLint
 import com.example.movieapp.data.model.MovieModel
 import com.example.movieapp.data.model.MoviePages
 import com.example.movieapp.data.source.HomeRepository
@@ -12,8 +11,8 @@ import retrofit2.Response
  */
 class HomeViewModel(private val repository: HomeRepository) : HomeMVContract {
     private var movieList = mutableListOf<MovieModel>()
+    private var popularList = mutableListOf<MovieModel>()
 
-    @SuppressLint("CheckResult")
     override fun getListNowPlayingFromServer(): Single<Response<MoviePages>>? =
         repository.getListNowPlaying()?.doOnSuccess {
             if (it.isSuccessful) {
@@ -23,5 +22,16 @@ class HomeViewModel(private val repository: HomeRepository) : HomeMVContract {
             }
         }
 
-    override fun getListNowPlaying(): MutableList<MovieModel> = movieList
+    override fun getListPopularFromServer(): Single<Response<MoviePages>>? =
+        repository.getListPopular()?.doOnSuccess {
+            if (it.isSuccessful) {
+                it.body()?.results?.let { list ->
+                    popularList.addAll(list)
+                }
+            }
+        }
+
+    override fun getListMovie(): MutableList<MovieModel> = movieList
+
+    override fun getPopularList(): MutableList<MovieModel> = popularList
 }

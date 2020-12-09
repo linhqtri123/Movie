@@ -11,5 +11,9 @@ import retrofit2.Response
 interface HomeMVContract {
     fun getListNowPlayingFromServer(): Single<Response<MoviePages>>?
 
-    fun getListNowPlaying(): MutableList<MovieModel>
+    fun getListPopularFromServer(): Single<Response<MoviePages>>?
+
+    fun getListMovie(): MutableList<MovieModel>
+
+    fun getPopularList(): MutableList<MovieModel>
 }

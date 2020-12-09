@@ -13,4 +13,5 @@ import retrofit2.Response
 class HomeRemoteDataSource(private val api: ApiService? = ApiClient.createService()) :
     HomeDataSource {
     override fun getListNowPlaying(): Single<Response<MoviePages>>? = api?.getListNowPlaying()
+    override fun getListPopular(): Single<Response<MoviePages>>? = api?.getListPopular()
 }

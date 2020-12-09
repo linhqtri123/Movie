@@ -14,4 +14,6 @@ class HomeRepository : HomeDataSource {
     private val homeRemoteDataSource = HomeRemoteDataSource(ApiClient.createService())
     override fun getListNowPlaying(): Single<Response<MoviePages>>? =
         homeRemoteDataSource.getListNowPlaying()
+
+    override fun getListPopular(): Single<Response<MoviePages>>? = homeRemoteDataSource.getListPopular()
 }

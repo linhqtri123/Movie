@@ -9,7 +9,7 @@ import com.example.movieapp.R
 import com.example.movieapp.adapter.MovieAdapter
 import com.example.movieapp.data.source.HomeRepository
 import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
+import io.reactivex.schedulers.Schedulers.io
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -18,6 +18,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var adapter: MovieAdapter
+    private lateinit var adapterPopular: MovieAdapter
     private var viewModel: HomeMVContract? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,21 +29,35 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun initAdapter() {
-        adapter = MovieAdapter(viewModel?.getListNowPlaying() ?: mutableListOf())
-        recyclerViewContainer?.layoutManager =
+        adapter = MovieAdapter(viewModel?.getListMovie() ?: mutableListOf())
+        adapterPopular = MovieAdapter(viewModel?.getPopularList() ?: mutableListOf())
+        recyclerViewNowPlayingContainer?.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        recyclerViewContainer?.adapter = adapter
+        recyclerViewNowPlayingContainer?.adapter = adapter
+        recyclerViewPopularContainer?.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recyclerViewPopularContainer?.adapter = adapterPopular
     }
 
     @SuppressLint("CheckResult")
     private fun initData() {
         viewModel?.getListNowPlayingFromServer()
-            ?.subscribeOn(Schedulers.io())
+            ?.subscribeOn(io())
             ?.observeOn(AndroidSchedulers.mainThread())
             ?.subscribe({
                 adapter.notifyDataSetChanged()
             }, {
                 it.message?.let { it1 -> Log.d("Throwable", it1) }
             })
+        viewModel?.getListPopularFromServer()
+            ?.subscribeOn(io())
+            ?.observeOn(AndroidSchedulers.mainThread())
+            ?.doOnSuccess {
+                Log.e("xxx", "doOnSuccess" + Thread.currentThread().toString())
+            }
+            ?.subscribe({
+                Log.e("xxx", "subscribe" + Thread.currentThread().toString())
+                adapterPopular.notifyDataSetChanged()
+            }, {})
     }
 }
