@@ -14,4 +14,6 @@ class HomeRemoteDataSource(private val api: ApiService? = ApiClient.createServic
     HomeDataSource {
     override fun getListNowPlaying(): Single<Response<MoviePages>>? = api?.getListNowPlaying()
     override fun getListPopular(): Single<Response<MoviePages>>? = api?.getListPopular()
+    override fun getListTopRated(): Single<Response<MoviePages>>? = api?.getListTopRated()
+    override fun getListUpcoming(): Single<Response<MoviePages>>? = api?.getListUpcoming()
 }

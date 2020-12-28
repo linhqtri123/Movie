@@ -13,7 +13,15 @@ interface HomeMVContract {
 
     fun getListPopularFromServer(): Single<Response<MoviePages>>?
 
+    fun getListTopRatedFromServer(): Single<Response<MoviePages>>?
+
+    fun getListUpcomingFromServer(): Single<Response<MoviePages>>?
+
     fun getListMovie(): MutableList<MovieModel>
 
     fun getPopularList(): MutableList<MovieModel>
+
+    fun getTopRatedList(): MutableList<MovieModel>
+
+    fun getUpcomingList(): MutableList<MovieModel>
 }

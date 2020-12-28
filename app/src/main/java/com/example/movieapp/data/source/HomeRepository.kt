@@ -15,5 +15,12 @@ class HomeRepository : HomeDataSource {
     override fun getListNowPlaying(): Single<Response<MoviePages>>? =
         homeRemoteDataSource.getListNowPlaying()
 
-    override fun getListPopular(): Single<Response<MoviePages>>? = homeRemoteDataSource.getListPopular()
+    override fun getListPopular(): Single<Response<MoviePages>>? =
+        homeRemoteDataSource.getListPopular()
+
+    override fun getListTopRated(): Single<Response<MoviePages>>? =
+        homeRemoteDataSource.getListTopRated()
+
+    override fun getListUpcoming(): Single<Response<MoviePages>>? =
+        homeRemoteDataSource.getListUpcoming()
 }

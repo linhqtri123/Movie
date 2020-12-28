@@ -11,4 +11,8 @@ interface HomeDataSource {
     fun getListNowPlaying(): Single<Response<MoviePages>>?
 
     fun getListPopular(): Single<Response<MoviePages>>?
+
+    fun getListTopRated(): Single<Response<MoviePages>>?
+
+    fun getListUpcoming(): Single<Response<MoviePages>>?
 }

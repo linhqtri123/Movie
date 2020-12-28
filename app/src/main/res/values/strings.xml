@@ -12,4 +12,6 @@
     <string name="text_view_now_playing_description">Now Playing</string>
     <string name="text_view_see_all_description">See All</string>
     <string name="text_view_popular_description">Popular</string>
+    <string name="text_view_top_rated_description">Top Rated</string>
+    <string name="text_view_upcoming_description">Upcoming</string>
 </resources>

@@ -14,4 +14,10 @@ interface ApiService {
 
     @GET("movie/popular?api_key=e0006e65d0ed3abc9b55fb77dece9d2e")
     fun getListPopular(): Single<Response<MoviePages>>
+
+    @GET("movie/top_rated?api_key=e0006e65d0ed3abc9b55fb77dece9d2e")
+    fun getListTopRated(): Single<Response<MoviePages>>
+
+    @GET("movie/upcoming?api_key=e0006e65d0ed3abc9b55fb77dece9d2e")
+    fun getListUpcoming(): Single<Response<MoviePages>>
 }
