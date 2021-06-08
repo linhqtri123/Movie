@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">MovieApp</string>
+    <string name="login_text_view_description">Login</string>
+    <string name="edit_text_password">Password</string>
+    <string name="edit_text_username">Username</string>
+    <string name="text_view_forgot_password_description">Forgot Password?</string>
+    <string name="button_login_description">Login</string>
+    <string name="login_activity_login_success">Login Success</string>
+    <string name="login_activity_login_failed">Email or Password is incorrect</string>
+    <string name="movie_image_content_description">Image Movie</string>
+    <string name="rate">rate</string>
+    <string name="text_view_now_playing_description">Now Playing</string>
+    <string name="text_view_see_all_description">See All</string>
+    <string name="text_view_popular_description">Popular</string>
+    <string name="text_view_top_rated_description">Top Rated</string>
+    <string name="text_view_upcoming_description">Upcoming</string>
 </resources>

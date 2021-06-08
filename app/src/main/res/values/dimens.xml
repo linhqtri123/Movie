@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_top_10dp">10dp</dimen>
+    <dimen name="layout_width_200dp">200dp</dimen>
+    <dimen name="layout_height_200dp">200dp</dimen>
+    <dimen name="text_view_text_size_40sp">40sp</dimen>
+    <dimen name="layout_width_310dp">310dp</dimen>
+    <dimen name="layout_height_122dp">122dp</dimen>
+    <dimen name="margin_top_30dp">30dp</dimen>
+    <dimen name="elevation_15dp">15dp</dimen>
+    <dimen name="layout_width_300dp">300dp</dimen>
+    <dimen name="layout_height_60dp">60dp</dimen>
+    <dimen name="box_stroke_width_02dp">0.2dp</dimen>
+    <dimen name="text_view_text_size_15sp">15sp</dimen>
+    <dimen name="layout_margin_top_40dp">40dp</dimen>
+    <dimen name="layout_width_160dp">160dp</dimen>
+    <dimen name="layout_height_40dp">40dp</dimen>
+    <dimen name="margin_bottom_30dp">30dp</dimen>
+    <dimen name="corner_radius_60dp">60dp</dimen>
+    <dimen name="stroke_width_5dp">5dp</dimen>
+    <dimen name="corner_radius_10dp">10dp</dimen>
+    <dimen name="margin_15dp">15dp</dimen>
+    <dimen name="text_view_text_size_20sp">20sp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_3dp">3dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="margin_2dp">2dp</dimen>
+</resources>

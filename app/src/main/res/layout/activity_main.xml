@@ -1,18 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/white"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:titleTextColor="@android:color/white" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            tools:background="@color/white"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/tvNowPlaying"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15dp"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:text="@string/text_view_now_playing_description"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_view_text_size_20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvSeeAllNowPlaying"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:text="@string/text_view_see_all_description"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_view_text_size_15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/tvNowPlaying"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewNowPlayingContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNowPlaying" />
+
+            <TextView
+                android:id="@+id/tvPopular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15dp"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:text="@string/text_view_popular_description"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_view_text_size_20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerViewNowPlayingContainer"
+                tools:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvSeeAllPopular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:text="@string/text_view_see_all_description"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_view_text_size_15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/tvPopular"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPopularContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPopular" />
+
+            <TextView
+                android:id="@+id/tvTopRated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15dp"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:text="@string/text_view_top_rated_description"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_view_text_size_20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerViewPopularContainer"
+                tools:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvSeeAllTopRated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:text="@string/text_view_see_all_description"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_view_text_size_15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/tvTopRated"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewTopRatedContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTopRated" />
+
+            <TextView
+                android:id="@+id/tvUpcoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15dp"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:text="@string/text_view_upcoming_description"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_view_text_size_20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerViewTopRatedContainer"
+                tools:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvSeeAllUpcoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:text="@string/text_view_see_all_description"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_view_text_size_15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/tvUpcoming"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewUpcomingContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvUpcoming" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>
